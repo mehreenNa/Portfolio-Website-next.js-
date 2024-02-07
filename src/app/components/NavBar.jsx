@@ -21,7 +21,7 @@ const NavBar = () => {
     <div className="container mx-auto flex flex-wrap items-center justify-between px-6 py-2">
       <Link href="/" className="relative block w-24 h-24 md:w-25 md:h-25"> {/* Increased the width and height */}
         <Image
-          src="/file2.PNG" // Your logo image path
+          src="/file2.png" // Your logo image path
           alt="Logo"
           layout="fill" // Use "fill" for a responsive image
           objectFit="cover" // Cover the container, maintaining aspect ratio
