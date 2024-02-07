@@ -106,9 +106,10 @@ const AboutSection = () => {
         <Image src="/about-image.webp" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-white texxt-base md:text-lg">
-          My name is Mehreen Naseer, and I'm currently in my last year of Software Engineering at the University of Alberta. My academic and professional journey is deeply rooted in a fervor for front-end development and data analysis, fueled by an ambition to innovate and infuse creativity into technology. I am dedicated to developing products that connect with users, leveraging data to guide these innovations. In collaborative environments, I aim to focus on user-centered design. As I immerse myself further into the technology landscape, I am on the lookout for a co-op opportunity where I can apply my abilities and further advance my knowledge. 
-          </p>
+          <p className="text-white text-base md:text-lg">
+  My name is Mehreen Naseer, and I&apos;m currently in my last year of Software Engineering at the University of Alberta. My academic and professional journey is deeply rooted in a fervor for front-end development and data analysis, fueled by an ambition to innovate and infuse creativity into technology. I am dedicated to developing products that connect with users, leveraging data to guide these innovations. In collaborative environments, I aim to focus on user-centered design. As I immerse myself further into the technology landscape, I am on the lookout for a co-op opportunity where I can apply my abilities and further advance my knowledge.
+</p>
+
           <div className="flex flex-row justify-start mt-8">
           <TabButton
               selectTab={() => handleTabChange("certifications")}
