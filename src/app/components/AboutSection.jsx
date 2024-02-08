@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
@@ -19,12 +19,9 @@ timelines.</li>
           
           {/* Add more as needed */}
         </ul>
-  
-      
       </div>
     ),
-  }
-  ,
+  },
   {
     title: "Skills",
     id: "skills",
@@ -41,13 +38,9 @@ timelines.</li>
             <li>Rust</li>
             <li>JavaScript (ES6+)</li>
             <li>SQL</li>
-            
             {/* Add other languages as needed */}
           </ul>
         </div>
-  
-       
-  
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">Frameworks and Libraries</h3>
           <ul className="list-disc pl-4 text-sm">
@@ -73,24 +66,21 @@ timelines.</li>
         </div>
       </div>
     ),
-  }
-  
-  ,
+  },
   {
     title: "Education",
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+      
+        <li>BEng in Software Engineering at the University of Alberta</li>
       </ul>
     ),
   },
- 
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("certifications"); // Changed initial state to "certifications"
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -100,26 +90,21 @@ const AboutSection = () => {
   };
 
   return (
-
-    <section  className="text-white">
+    <section className="text-white">
       <div className="gap-8 items-center py-8 px-4 xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-16">
         <Image src="/about-image.webp" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-white text-base md:text-lg">
-  My name is Mehreen Naseer, and I&apos;m currently in my last year of Software Engineering at the University of Alberta. My academic and professional journey is deeply rooted in a fervor for front-end development and data analysis, fueled by an ambition to innovate and infuse creativity into technology. I am dedicated to developing products that connect with users, leveraging data to guide these innovations. In collaborative environments, I aim to focus on user-centered design. As I immerse myself further into the technology landscape, I am on the lookout for a co-op opportunity where I can apply my abilities and further advance my knowledge.
-</p>
-
+            My name is Mehreen Naseer, and I&apos;m currently in my last year of Software Engineering at the University of Alberta. My academic and professional journey is deeply rooted in a fervor for front-end development and data analysis, fueled by an ambition to innovate and infuse creativity into technology. I am dedicated to developing products that connect with users, leveraging data to guide these innovations. In collaborative environments, I aim to focus on user-centered design. As I immerse myself further into the technology landscape, I am on the lookout for a co-op opportunity where I can apply my abilities and further advance my knowledge.
+          </p>
           <div className="flex flex-row justify-start mt-8">
-          <TabButton
+            <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              Work Experince
+              Work Experience
             </TabButton>
-           
-           
-           
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -132,9 +117,8 @@ const AboutSection = () => {
             >
               Education
             </TabButton>
-            
           </div>
-          <div id = "projects" className="mt-8">
+          <div id="projects" className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
